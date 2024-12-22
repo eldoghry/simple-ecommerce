@@ -2,13 +2,14 @@
 
 ### Index
 
-    - [Dummy Data Insertion](#dummy-data-insertion)
-    - [Overview](#overview)
-    - [Dummy categories](#insert-dummy-data-into-the-category-table)
-    - [Dummy products](#insert-dummy-data-into-the-product-table)
-    - [Dummy customers](#insert-dummy-data-into-the-customer-table)
-    - [Dummy orders](#insert-dummy-data-into-the-order-table)
-    - [Dummy order_details](#insert-dummy-data-into-the-order_details-table)
+- [Dummy Data Insertion](#dummy-data-insertion)
+  - [Index](#index)
+  - [Overview](#overview)
+  - [Insert dummy data into the category table](#insert-dummy-data-into-the-category-table)
+  - [Insert dummy data into the product table](#insert-dummy-data-into-the-product-table)
+  - [Insert dummy data into the customer table](#insert-dummy-data-into-the-customer-table)
+  - [Insert dummy data into the order table](#insert-dummy-data-into-the-order-table)
+  - [Insert dummy data into the order\_details table](#insert-dummy-data-into-the-order_details-table)
 
 ### Overview
 
