@@ -1,8 +1,20 @@
-### Dummy Data Insertion
+## Dummy Data Insertion
+
+### Index
+
+    - [Dummy Data Insertion](#dummy-data-insertion)
+    - [Overview](#overview)
+    - [Dummy categories](#insert-dummy-data-into-the-category-table)
+    - [Dummy products](#insert-dummy-data-into-the-product-table)
+    - [Dummy customers](#insert-dummy-data-into-the-customer-table)
+    - [Dummy orders](#insert-dummy-data-into-the-order-table)
+    - [Dummy order_details](#insert-dummy-data-into-the-order_details-table)
+
+### Overview
 
 The schema includes SQL scripts to insert dummy data into the database tables. This data can be used for testing and development purposes.
 
-## Insert dummy data into the category table
+### Insert dummy data into the category table
 
         INSERT INTO category
             (name)
@@ -14,7 +26,7 @@ The schema includes SQL scripts to insert dummy data into the database tables. T
             ('Food'),
             ('Watches');
 
-## Insert dummy data into the product table
+### Insert dummy data into the product table
 
     INSERT INTO product
         (category*id, name, description, price, stock_quantity)
@@ -27,7 +39,7 @@ The schema includes SQL scripts to insert dummy data into the database tables. T
     FROM
         generate_series(1, 100);
 
-## Insert dummy data into the customer table
+### Insert dummy data into the customer table
 
     INSERT INTO customer
         (firstname, lastname, email, password)
@@ -39,7 +51,7 @@ The schema includes SQL scripts to insert dummy data into the database tables. T
     FROM
         generate_series(1, 100);
 
-## Insert dummy data into the order table
+### Insert dummy data into the order table
 
     INSERT INTO "order"
         (customer*id, order_date, total_amount)
@@ -50,7 +62,7 @@ The schema includes SQL scripts to insert dummy data into the database tables. T
     FROM
         generate_series(1, 1001);
 
-## Insert dummy data into the order\*details table
+### Insert dummy data into the order_details table
 
     INSERT INTO order_details
         (order_id, product_id, quantity, unit_price)
