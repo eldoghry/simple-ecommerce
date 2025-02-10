@@ -289,3 +289,190 @@ SELECT cron.schedule('0 * * * *', 'REFRESH MATERIALIZED VIEW category_revenue_mv
 ```
 
 **Execution Time After using MV:** 0.379 ms
+
+---
+
+### Query: Daily Revenue Report
+
+**Initial Query**
+
+```sql
+select
+	count(*) as orders_count,
+	sum(o.order_total_amount) as revenue
+from
+	orders o
+where
+	o.order_date between '2024-01-01 00:00:00' and '2024-01-01 23:59:59';
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
+
+---
+
+### Query: Daily Revenue Report
+
+**Initial Query**
+
+```sql
+select
+	count(*) as orders_count,
+	sum(o.order_total_amount) as revenue
+from
+	orders o
+where
+	o.order_date between '2024-01-01 00:00:00' and '2024-01-01 23:59:59';
+-- Execution Time: 5.240 ms
+```
+
+**Original Execution Time:** 5.240 ms
+
+#### Optimization Techniques
+
+- Add a covering index for order date that includes order_total_amount
+
+**Optimization Query:**
+
+```sql
+create index idx_order_date_with_total_amount on orders (order_date, order_total_amount);
+
+```
+
+**Execution Time After Optimization:** 1.416 ms
+
+#### Other Optimization Techniques
+
+- 1️⃣ Partition by date if handling large data sets.
+- 2️⃣ Use a materialized view if this query runs frequently for reporting.
+
+---
+
+### Query: x
+
+**Initial Query**
+
+```sql
+
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
+
+---
+
+### Query: x
+
+**Initial Query**
+
+```sql
+
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
+
+---
+
+### Query: x
+
+**Initial Query**
+
+```sql
+
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
+
+---
+
+### Query: x
+
+**Initial Query**
+
+```sql
+
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
+
+---
+
+### Query: x
+
+**Initial Query**
+
+```sql
+
+```
+
+**Original Execution Time:** x ms
+
+#### Optimization Techniques
+
+- 1
+
+**Optimization Query:**
+
+```sql
+
+```
+
+**Execution Time After Optimization:** x ms
