@@ -44,7 +44,7 @@ SELECT
     p.total_products
 FROM category c
 LEFT JOIN (
-    -- pre aggregate product table to reduce joining rows
+-- pre aggregate product table to reduce joining rows
     SELECT
         p1.product_category_id,
         COUNT(p1.product_category_id) AS total_products
@@ -139,9 +139,9 @@ limit 1000; -- Execution Time: 953.956 ms
 
 #### Optimization Techniques
 
-    - create covering index on customer table to cover name with id
-    - as we order by order date, we create index on that column to speed up ordering operation.
-    - create index for foreign key customer id on order table to speed up joining condition
+- create covering index on customer table to cover name with id
+- as we order by order date, we create index on that column to speed up ordering operation.
+- create index for foreign key customer id on order table to speed up joining condition
 
 **Optimization Query:**
 
@@ -180,7 +180,7 @@ where
 
 #### Optimization Techniques
 
-    - create index for product stock quantity
+- create index for product stock quantity
 
 **Optimization Query:**
 
