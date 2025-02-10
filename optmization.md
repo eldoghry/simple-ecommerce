@@ -29,8 +29,7 @@ ORDER BY total_products DESC;
 
 #### Optimization Technique
 
-- Created an index on `product_category_id` in the `product` table to enhance the sequence scan, reducing it to an index-only scan.
-
+- Created an index on `product_category_id` in the `product` table to enhance the sequence scan, reducing it to an index-only scan
 - the `product` table is aggregated using a subquery. This reduces the number of rows processed in the `JOIN` operation, improving performance.
 
 **Optimization Query:**
@@ -78,11 +77,10 @@ order by total_products desc; -- Execution Time: 5.513 ms
 
 #### Optimization Techniques
 
-    - create index for foriegn key on order_customer_id on order table to fast joining condition
-    - pre aggregate total_spending, sorting and limiting on order table
-    - use CTE for readability
-    - create covering index on customer table to cover customer name with customer id to convert sequential scan to index only scan
-    -
+- create index for foriegn key on order_customer_id on order table to fast joining condition
+- pre aggregate total_spending, sorting and limiting on order table
+- use CTE for readability
+- create covering index on customer table to cover customer name with customer id to convert sequential scan to index only scan
 
 **Optimization Query:**
 
